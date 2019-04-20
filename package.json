@@ -1,0 +1,14 @@
+{
+  "name": "Flapoutou",
+  "version": "1.0.0",
+  "description": "Faire des commandes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yukio",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
