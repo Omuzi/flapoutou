@@ -49,7 +49,6 @@ client.on('message', async message => {
       .setThumbnail(message.author.avatarURL)
       .addField(":tools: Modération", "Fais `*mod` pour voir mes commandes de modération !")
       .addField(":tada: Fun", "Fais `*fun` pour voir mes commandes d'animation !")
-      .addField(":musical_note: Music", "Fais`*music` pour voir mes commandes de music")
       .setFooter("Menu d'aide")
       .setTimestamp()
     message.channel.send(aide_embed);
@@ -106,73 +105,6 @@ client.on('message', async message => {
       message.reply("Tu peux regarder tes messages privés !")
       message.author.send(stats_embed);
 
-      break;
-
-    case "play":
-
-      if (!args[1]) {
-
-        message.channel.sendMessage("Tu dois m’indiquer un lien YouTube");
-
-        return;
-
-      }
-
-      if (!message.member.voiceChannel) {
-
-        message.channel.sendMessage(":x: Tu dois être dans un salon vocal");
-
-        return;
-
-      }
-
-
-      if (!servers[message.guild.id]) servers[message.guild.id] = {
-
-        queue: []
-
-      };
-
-
-      var server = servers[message.guild.id];
-
-
-      server.queue.push(args[1]);
-
-      if (!message.guild.voiceConnection) message.member.voiceChannel.join().then(function (connection) {
-
-        play(connection, message)
-
-      });
-
-      break;
-
-    case "skip":
-
-      if (!message.member.voiceChannel) {
-
-        message.channel.sendMessage(":x: Tu dois être dans un salon vocal");
-
-        return;
-
-      }
-
-      var server = servers[message.guild.id];
-
-      if (server.dispatcher) server.dispatcher.end();
-
-      break;
-
-    case "stop":
-
-      if (!message.member.voiceChannel)
-
-        return message.channel.send(":x: Tu dois être dans un salon vocal");
-
-      message.member.voiceChannel.leave();
-
-      break;
-
   }
 
   if (message.content === prefix + "info") {
@@ -187,19 +119,6 @@ client.on('message', async message => {
       .setFooter("Info - Tuto")
     message.channel.sendMessage(info_embed)
     console.log("Un utilisateur a effectué la commande d'info !")
-  }
-
-  if (message.content === prefix + "music") {
-    var info_embed = new Discord.RichEmbed()
-      .setColor("RANDOME")
-      .setTitle(":musical_note: Voici les commandes de music !")
-      .addField("*play + lien youtube", "Joue de la musique dans le salon")
-      .addField("*stop", "Fait partir le bot du vocal")
-      .addField("*skip", "Passe une music")
-      .setFooter("Commande music")
-    message.channel.sendMessage(info_embed)
-    console.log("Un utilisateur a effectué la commande music !")
-
   }
 
   if (message.content.startsWith(prefix + "kick")) {
