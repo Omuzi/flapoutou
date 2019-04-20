@@ -4,8 +4,6 @@ const token = process.env.token
 
 var prefix = "*";
 
-const ytdl = require('ytdl-core');
-
 const queue = new Map();
 
 var servers = {};
