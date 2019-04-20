@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const token = process.env.token
 
 var prefix = "*";
 
@@ -9,7 +10,7 @@ const queue = new Map();
 
 var servers = {};
 
-client.login("NTM1NDc4MTYxMDMxNDMwMTU0.XLrtVg.1zzMEbi9e4oH_6eCBN5LAcP7jXc");
+client.login(token);
 
 function play(connection, message) {
 
