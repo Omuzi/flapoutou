@@ -140,7 +140,6 @@ client.on('message', async message => {
 
     kick.kick().then(member => {
       message.channel.send(`${member.user.username} est kick pas ${message.author.username}`);
-      console.log("Un utilisateur utilise la commande *kick")
     });
   }
 
