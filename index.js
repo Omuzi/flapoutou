@@ -51,7 +51,7 @@ client.on('message', async message => {
       .addField(":tada: Fun", "Fais `*fun` pour voir mes commandes d'animation !")
       .setFooter("Menu d'aide")
       .setTimestamp()
-    console.log("<@user> utilise la commande *help")
+    console.log("Un utilisateur utilise la commande *help")
     message.channel.send(aide_embed);
   }
 
