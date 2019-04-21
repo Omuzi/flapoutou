@@ -110,8 +110,6 @@ client.on('message', async message => {
 
   }
   
-      break;
-
     case "play":
 
       if (!args[1]) {
