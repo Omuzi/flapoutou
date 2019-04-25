@@ -68,7 +68,6 @@ client.on('message', async message => {
       .addField("*warn <@user> <@Phrase a envoyer>", "Envoie un avertissement")
       .setFooter("Commande modération")
       .setTimestamp()
-    console.log("Un utilisateur utilise la commande *mod")
     message.channel.send(mod_embed);
   }
 
@@ -173,6 +172,7 @@ client.on('message', async message => {
     if (!args[0]) return message.channel.send("Tu dois préciser un nombre de messages à supprimer !")
     message.channel.bulkDelete(args[0]).then(() => {
       message.channel.send(`${args[0]} messages ont été supprimés !`);
+      onsole.log("Un utilisateur utilise la commande *clear")
     });
   }
 
