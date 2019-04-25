@@ -68,7 +68,7 @@ client.on('message', async message => {
       .addField("*warn <@user> <@Phrase a envoyer>", "Envoie un avertissement")
       .setFooter("Commande modération")
       .setTimestamp()
-    console.log(<@user> + "utilise la commande *mod")
+    console.log("Un utilisateur utilise la commande *mod")
     message.channel.send(mod_embed);
   }
 
