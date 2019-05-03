@@ -68,7 +68,7 @@ client.on('message', async message => {
       .addField("*unmute <@user>", "Unmute l'utilisateur mentionné")
       .addField("*warn <@user", "Avertis l'utilisateur mentionné")
       .addField("*seewarns <@user", "Donne les warns d'un utilisateur")
-      .addField("*deletewarns <@user" "Supprime les warns d'un utilisateur")
+      .addField("*deletewarns <@user", "Supprime les warns d'un utilisateur")
       .setFooter("Commande modération")
       .setTimestamp()
     message.channel.send(mod_embed);
