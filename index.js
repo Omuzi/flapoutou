@@ -49,7 +49,6 @@ client.on('message', async message => {
       .setThumbnail(message.author.avatarURL)
       .addField(":tools: Modération", "Fais `*mod` pour voir mes commandes de modération !")
       .addField(":tada: Fun", "Fais `*fun` pour voir mes commandes d'animation !")
-      .addField(":warning: Warns ", "Fais `*warns` pour voir mes commandes de warns)
       .addField(":book: Info" , "Des mises à jours sont à venirs !")     
       .setFooter("Menu d'aide")
       .setTimestamp()
