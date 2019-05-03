@@ -56,8 +56,6 @@ client.on('message', async message => {
     message.channel.send(aide_embed);
   }
   
-    }
-
   if (message.content === prefix + "warns") {
     var mod_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
