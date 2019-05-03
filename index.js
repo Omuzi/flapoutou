@@ -56,17 +56,6 @@ client.on('message', async message => {
     message.channel.send(aide_embed);
   }
   
-  if (message.content === prefix + "warns") {
-    var mod_embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
-      .setTitle(`:tools: Voici mes commandes modérations !`)
-      .setThumbnail(message.author.avatarURL)
-      .addField("*warn <@user>")
-      .setFooter("Commande modération")
-      .setTimestamp()
-    message.channel.send(mod_embed);
-  }
-
   if (message.content === prefix + "mod") {
     var mod_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -77,6 +66,9 @@ client.on('message', async message => {
       .addField("*clear nombre", "Supprime le nombre de messages indiqué")
       .addField("*mute <@user>", "Mute l'utilisateur mentionné")
       .addField("*unmute <@user>", "Unmute l'utilisateur mentionné")
+      .addField("*warn <@user", "Avertis l'utilisateur mentionné")
+      .addField("*seewarns <@user", "Donne les warns d'un utilisateur")
+      .addField("*deletewarns <@user" "Supprime les warns d'un utilisateur")
       .setFooter("Commande modération")
       .setTimestamp()
     message.channel.send(mod_embed);
@@ -469,19 +461,19 @@ client.on('message', async message => {
 
           } else {
 
-            message.channel.send("Erreur mauvais usage: " + prefix + "clearwarns <utilisateur> <nombre>");
+            message.channel.send("Erreur mauvais usage: " + prefix + "deleterwarns <utilisateur> <nombre>");
 
           }
 
         } else {
 
-          message.channel.send("Erreur mauvais usage: " + prefix + "clearwarns <utilisateur> <nombre>");
+          message.channel.send("Erreur mauvais usage: " + prefix + "deletewarns <utilisateur> <nombre>");
 
         }
 
       } else {
 
-        message.channel.send("Erreur mauvais usage: " + prefix + "clearwarns <utilisateur> <nombre>");
+        message.channel.send("Erreur mauvais usage: " + prefix + "deletewarns <utilisateur> <nombre>");
 
       }
 
