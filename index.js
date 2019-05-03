@@ -49,10 +49,25 @@ client.on('message', async message => {
       .setThumbnail(message.author.avatarURL)
       .addField(":tools: Modération", "Fais `*mod` pour voir mes commandes de modération !")
       .addField(":tada: Fun", "Fais `*fun` pour voir mes commandes d'animation !")
+      .addField(":warning: Warns ", "Fais `*warns` pour voir mes commandes de warns)
+      .addField(":book: Info" , "Des mises à jours sont à venirs !")     
       .setFooter("Menu d'aide")
       .setTimestamp()
     console.log("Un utilisateur utilise la commande *help")
     message.channel.send(aide_embed);
+  }
+  
+  if (message.content === prefix + "warns") {
+    var mod_embed = new Discord.RichEmbed()
+     .setColor ('Random')
+     .setTitle(`:warning: Voici mes commandes warns`)
+     .setTumbnail(message.author.avatarURL)
+     .addField("*warn <@user> <@Phrase à envoyer", "Envoie un avertissement" )
+     .addField("*seewarns <@user>", "Voir les avertissement de la personne")
+     .addField("*deletewarns <@user <@nombre>", "Supprimer les avertissement des la personnes")
+     .setFooter("Commande de warn")
+     .setTimestamp()
+    message.channel.send(mod_embed);
   }
 
   if (message.content === prefix + "mod") {
@@ -65,7 +80,6 @@ client.on('message', async message => {
       .addField("*clear nombre", "Supprime le nombre de messages indiqué")
       .addField("*mute <@user>", "Mute l'utilisateur mentionné")
       .addField("*unmute <@user>", "Unmute l'utilisateur mentionné")
-      .addField("*warn <@user> <@Phrase a envoyer>", "Envoie un avertissement")
       .setFooter("Commande modération")
       .setTimestamp()
     message.channel.send(mod_embed);
