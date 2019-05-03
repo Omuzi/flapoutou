@@ -56,16 +56,16 @@ client.on('message', async message => {
     message.channel.send(aide_embed);
   }
   
+    }
+
   if (message.content === prefix + "warns") {
     var mod_embed = new Discord.RichEmbed()
-     .setColor ('Random')
-     .setTitle(`:warning: Voici mes commandes warns`)
-     .setTumbnail(message.author.avatarURL)
-     .addField("*warn <@user> <@Phrase à envoyer", "Envoie un avertissement" )
-     .addField("*seewarns <@user>", "Voir les avertissement de la personne")
-     .addField("*deletewarns <@user <@nombre>", "Supprimer les avertissement des la personnes")
-     .setFooter("Commande de warn")
-     .setTimestamp()
+      .setColor('RANDOM')
+      .setTitle(`:tools: Voici mes commandes modérations !`)
+      .setThumbnail(message.author.avatarURL)
+      .addField("*warn <@user>")
+      .setFooter("Commande modération")
+      .setTimestamp()
     message.channel.send(mod_embed);
   }
 
