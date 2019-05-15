@@ -511,7 +511,7 @@ client.on('message', async message => {
     var ball_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setTitle('Voici ma commande *pile :')
-      .addField('Question :', `${args}`)
+      .addField('Résultat :', `${args}`)
       .addField('Reponse', reponse[Math.round(Math.random() * reponse.length)])
       .setFooter('*pile :)')
     message.channel.send(ball_embed);a
