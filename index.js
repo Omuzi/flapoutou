@@ -502,7 +502,7 @@ client.on('message', async message => {
     message.channel.send(ball_embed);a
   }
 
-  const réponse = JSON.parse(fs.readFileSync('./pile.json'));
+  const reponse = JSON.parse(fs.readFileSync('./pile.json'));
 
   if (message.content.startsWith(prefix + "pile")) {
 
@@ -512,7 +512,7 @@ client.on('message', async message => {
       .setColor('RANDOM')
       .setTitle('Voici ma commande *pile :')
       .addField('Question :', `${args}`)
-      .addField('Réponse', réponse[Math.round(Math.random() * réponse.length)])
+      .addField('Reponse', reponse[Math.round(Math.random() * reponse.length)])
       .setFooter('*pile :)')
     message.channel.send(ball_embed);a
   }
