@@ -502,7 +502,7 @@ client.on('message', async message => {
     message.channel.send(ball_embed);a
   }
 
-  const réponse = JSON.parse(fs.readFileSync('./pile.json', "utf8"));
+  const réponse = JSON.parse(fs.readFileSync('./pile.json'));
 
   if (message.content.startsWith(prefix + "pile")) {
 
