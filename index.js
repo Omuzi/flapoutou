@@ -514,7 +514,7 @@ client.on('message', async message => {
       .addField('Résultat :', `${args}`)
       .addField('Reponse', reponse[Math.round(Math.random() * reponse.length)])
       .setFooter('*pile :)')
-    message.channel.send(ball_embed);a
+    message.channel.send(ball_embed);
   }
       });
       
