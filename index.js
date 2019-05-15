@@ -505,6 +505,8 @@ client.on('message', async message => {
   let reponse = JSON.parse(fs.readFileSync("./pile.json", "utf8"));
 
   if (message.content.startsWith(prefix + "pile")) {
+    
+        var args = message.content.split(' ').join(' ').slice(6);
 
     var ball_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
