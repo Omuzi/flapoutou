@@ -506,8 +506,6 @@ client.on('message', async message => {
 
   if (message.content.startsWith(prefix + "pile")) {
 
-    var args = message.content.split(' ').join(' ').slice(6);
-
     var ball_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setTitle('Voici ma commande *pile :')
