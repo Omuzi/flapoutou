@@ -502,6 +502,22 @@ client.on('message', async message => {
     message.channel.send(ball_embed);a
   }
       })
+
+  const réponse = JSON.parse(fs.readFileSync('./pile.json', "utf8"));
+
+  if (message.content.startsWith(prefix + "pile")) {
+
+    var args = message.content.split(' ').join(' ').slice(6);
+
+    var ball_embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle('Voici ma commande *pile :')
+      .addField('Question :', `${args}`)
+      .addField('Réponse', réponse[Math.round(Math.random() * réponse.length)])
+      .setFooter('*pile :)')
+    message.channel.send(ball_embed);a
+  }
+      })
       
     
 
