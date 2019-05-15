@@ -507,8 +507,6 @@ client.on('message', async message => {
   if (message.content.startsWith(prefix + "pile")) {
 
     var args = message.content.split(' ').join(' ').slice(6);
-    
-    if (!args) return message.channel.send("Tu dois me poser une question !")
 
     var ball_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
