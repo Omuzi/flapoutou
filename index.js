@@ -517,7 +517,7 @@ client.on('message', async message => {
       .setFooter('*pile :)')
     message.channel.send(ball_embed);a
   }
-      })
+      });
       
     
 
