@@ -501,7 +501,6 @@ client.on('message', async message => {
       .setFooter('8ball :)')
     message.channel.send(ball_embed);a
   }
-      })
 
   const réponse = JSON.parse(fs.readFileSync('./pile.json', "utf8"));
 
