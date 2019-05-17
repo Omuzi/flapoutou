@@ -84,6 +84,7 @@ client.on('message', async message => {
       .addField("*info", "Donne des indormations sur le bot et le serveur !")
       .addField("*8ball", "Pose une question et il te répond")
       .addField("*pile", "Tu choisis Pile alors si tu as Face tu perds")
+      .addField("*face", "Tu choisis Face alors si tu as Pile tu perds")
       .setFooter("Commande modération")
       .setTimestamp()
     console.log("Un utilisateur utilise la commande *fun")
