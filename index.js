@@ -538,7 +538,6 @@ client.on('message', async message => {
     .setColor('#76D880')
     .setDescription(`:inbox_tray: <@${member.user.id}> à rejoint ${serverTag}`)
     .setFooter('Bienvenue !')
-    .setThumbnail(message.author.avatarURL)
     return welcomechannel.send({embed})
       })
   });
