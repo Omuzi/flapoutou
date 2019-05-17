@@ -83,6 +83,7 @@ client.on('message', async message => {
       .addField("*stats", "Le bot vous envoie des informations sur votre profil !")
       .addField("*info", "Donne des indormations sur le bot et le serveur !")
       .addField("*8ball", "Pose une question et il te répond")
+      .addField("*Pile", "Tu choisis Pile alors si tu as Face tu perds")
       .setFooter("Commande modération")
       .setTimestamp()
     console.log("Un utilisateur utilise la commande *fun")
