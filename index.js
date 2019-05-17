@@ -529,6 +529,10 @@ client.on('message', async message => {
       .setFooter('Face :)')
     message.channel.send(face_embed);a
   }
+  
+  bot.on("guildMemberAdd", member => { 
+    member.guild.channels.find("name", "general").send(`Bienvenue ${member}`);
+  })
   });
       
     
