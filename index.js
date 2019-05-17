@@ -509,9 +509,9 @@ client.on('message', async message => {
 
     var pile_embed = new Discord.RichEmbed()
       .setColor('RANDOM')
-      .setTitle('Voici ma commande 8ball :')
+      .setTitle('Voici ma commande Pile :')
       .addField('Réponse', reponse[Math.round(Math.random() * reponse.length)])
-      .setFooter('pile :)')
+      .setFooter('Pile :)')
     message.channel.send(pile_embed);a
   }
       });
