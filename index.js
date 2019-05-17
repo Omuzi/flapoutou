@@ -530,7 +530,7 @@ client.on('message', async message => {
     message.channel.send(face_embed);a
   }
   
-  bot.on('guildMemberAdd', member => {
+  client.on('guildMemberAdd', member => {
 
     let serverTag = member.guild.name
     const welcomechannel = member.guild.channels.find('id', '485581842112839680')  
