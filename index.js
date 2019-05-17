@@ -515,6 +515,19 @@ client.on('message', async message => {
       .setFooter('Pile :)')
     message.channel.send(pile_embed);a
   }
+  
+    const reponse = JSON.parse(fs.readFileSync('./face.json', "utf8"));
+  if (message.content.startsWith(prefix + "face")) {
+
+    var args = message.content.split(' ').join(' ').slice(6);
+
+    var face_embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setTitle('Voici ma commande Face :')
+      .addField('Réponse', reponse[Math.round(Math.random() * reponse.length)])
+      .setFooter('Face :)')
+    message.channel.send(face_embed);a
+  }
       });
       
     
