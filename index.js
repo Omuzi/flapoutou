@@ -538,7 +538,7 @@ client.on('message', async message => {
     .setColor('#76D880')
     .setDescription(`:inbox_tray: <@${member.user.id}> à rejoint ${serverTag}`)
     .setFooter('Bienvenue !')
-    return welcomechannel.send({embed})
+    return message.channel.send({embed})
       })
   });
       
