@@ -540,7 +540,8 @@ client.on('message', async message => {
     .setFooter('Bienvenue !')
     .setThumbnail(message.author.avatarURL)
     return welcomechannel.send({embed})
-      });
+      })
+  });
       
     
 
