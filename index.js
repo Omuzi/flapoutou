@@ -529,17 +529,6 @@ client.on('message', async message => {
       .setFooter('Face :)')
     message.channel.send(face_embed);a
   }
-  
-  client.on('guildMemberAdd', member => {
-
-    let serverTag = member.guild.name
-    const welcomechannel = member.guild.channels.find('id', '485581842112839680')  
-    var embed = new Discord.RichEmbed()
-    .setColor('#76D880')
-    .setDescription(`:inbox_tray: <@${member.user.id}> à rejoint ${serverTag}`)
-    .setFooter('Bienvenue !')
-    return message.channel.send({embed})
-      })
   });
       
     
