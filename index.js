@@ -36,7 +36,7 @@ client.on("ready", () => {
 
 client.on('message', async message => {
 
-  if (message.content === "Bonjour") {
+  if (message.content === prefix + "Bonjour") {
     message.reply("Salut");
     console.log('Le bot dit bonjour');
   }
