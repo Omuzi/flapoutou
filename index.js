@@ -530,6 +530,12 @@ client.on('message', async message => {
       .setFooter('Face :)')
     message.channel.send(face_embed);a
   }  
+  bot.on('guildMemberAdd', member => {
+  member.createDM().then(channel => {
+    return channel.send('Bienvenue sur mon serveur ' + member.displayName)
+  }).catch(console.error)
+  // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
+})
   });
       
     
