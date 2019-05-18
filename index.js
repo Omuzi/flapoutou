@@ -50,6 +50,7 @@ client.on('message', async message => {
       .addField(":tools: Modération", "Fais `*mod` pour voir mes commandes de modération !")
       .addField(":tada: Fun", "Fais `*fun` pour voir mes commandes d'animation !")
       .addField(":book: Info" , "Des mises à jours sont à venirs !")     
+      .addField(":warning: Mise à jour", "Une commande fun (Pile ou Face) à été ajouter !")
       .setFooter("Menu d'aide")
       .setTimestamp()
     console.log("Un utilisateur utilise la commande *help")
