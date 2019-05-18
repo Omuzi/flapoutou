@@ -123,7 +123,7 @@ client.on('message', async message => {
       .addField("ID :id: ", `${client.user.id}`)
       .addField("Nombre de membres", message.guild.members.size)
       .addField("Nombre de catégories et de salons", message.guild.channels.size)
-      .setFooter("Info - Tuto")
+      .setFooter("Info")
     message.channel.sendMessage(info_embed)
     console.log("Un utilisateur a effectué la commande d'info !")
   }
@@ -531,7 +531,7 @@ client.on('message', async message => {
   }  
   
   client.on('guildMemberAdd', member => {
-    const welcomechannel = member.guild.channels.find((x) => x.id === 'RANDOM'
+    const welcomechannel = member.guild.channels.find((x) => x.id === `RANDOM`
     let c_embed = new Discord.RichEmbed()
     .setcolor('RANDOM')
     .setDiscription(`Bienvenue sur le serveur ${member.user.username}`)
@@ -539,7 +539,7 @@ client.on('message', async message => {
   })
   
    client.on('guildMemberRemove', member => {
-    const welcomechannel = member.guild.channels.find((x) => x.id === 'RANDOM'
+    const welcomechannel = member.guild.channels.find((x) => x.id === `RANDOM`
     let a_embed = new Discord.RichEmbed()
     .setcolor('RANDOM')
     .setDiscription(`${member.user.username} nous a quitter`)
