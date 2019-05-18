@@ -531,7 +531,7 @@ client.on('message', async message => {
   }  
   
   client.on('guildMemberAdd', member => {
-    const welcomechannel = member.guild.channels.find((x) => x.id === `RANDOM`
+    const welcomechannel = member.guild.channels.find((x) => x.id === `578236541231562754`
     let c_embed = new Discord.RichEmbed()
     .setcolor('RANDOM')
     .setDiscription(`Bienvenue sur le serveur ${member.user.username}`)
@@ -539,7 +539,7 @@ client.on('message', async message => {
   })
   
    client.on('guildMemberRemove', member => {
-    const welcomechannel = member.guild.channels.find((x) => x.id === `RANDOM`
+    const welcomechannel = member.guild.channels.find((x) => x.id === `578236541231562754`
     let a_embed = new Discord.RichEmbed()
     .setcolor('RANDOM')
     .setDiscription(`${member.user.username} nous a quitter`)
