@@ -529,22 +529,6 @@ client.on('message', async message => {
       .setFooter('Face :)')
     message.channel.send(face_embed);a
   }  
-  
-  client.on('guildMemberAdd', member => {
-    const welcomechannel = member.guild.channels.find((x) => x.id === 
-    let c_embed = new Discord.RichEmbed()
-    .setcolor('RANDOM')
-    .setDiscription(`Bienvenue sur le serveur ${member.user.username}`)
-    return welcomechannel.send(c_embed)
-  })
-  
-   client.on('guildMemberRemove', member => {
-    const welcomechannel = member.guild.channels.find((x) => x.id === 
-    let a_embed = new Discord.RichEmbed()
-    .setcolor('RANDOM')
-    .setDiscription(`${member.user.username} nous a quitter`)
-    return welcomechannel.send(a_embed);
-  })
   });
       
     
