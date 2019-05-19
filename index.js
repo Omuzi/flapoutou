@@ -134,14 +134,14 @@ client.on('message', async message => {
     
 
     if (message.mentions.users.size === 0) {
-      return message.channel.send("Vous devez metionner un utilisaeur")
+      return message.channel.send("Vous devez mentionner un utilisaeur")
     }
     var kick = message.guild.member(message.mentions.users.first());
     if (!kick) {
       return message.channel.send("Je ne sais pas si l'utilisateur existe :/")
     }
 
-    if (message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
+    if (message.guild.member(client.user).hasPermission("MEMBER_KICK")) {
       return message.channel.send("Je n'ai pas la permission pour kick");
     }
 
