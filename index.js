@@ -130,7 +130,7 @@ client.on('message', async message => {
   }
 
   if (message.content.startsWith(prefix + "kick")) {
-    if (!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send("Vous n'avez pas la permission!");
+    if (!message.guild.member(message.author).hasPermission("MEMBER_KICK")) return message.channel.send("Vous n'avez pas la permission!");
     
 
     if (message.mentions.users.size === 0) {
