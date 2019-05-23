@@ -30,7 +30,9 @@ function play(connection, message) {
 client.on("ready", () => {
 
   console.log("Je suis prêt !");
-  bot.user.setActivity("Type !help");
+  client.user.setActivity('YouTube', { type: 'WATCHING' })
+  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  .catch(console.error);
 
 });
 
