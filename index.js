@@ -30,7 +30,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
   console.log("Je suis prêt !");
-  client.user.setGame("Faire des commandes (*help)");
+  client.user..setActivity("S'amuse à faire des commandes");
 
 });
 
