@@ -536,7 +536,6 @@ client.on('message', async message => {
 
   var role = member.guild.roles.find('name', 'user');
   member.addRole(role);
-  );
     
   });
       
