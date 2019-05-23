@@ -30,7 +30,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
   console.log("Je suis prêt !");
-  client.user.setActivity('les mises à jour à venir ', { type: 'Playing' })
+  client.user.setActivity('les mises à jour à venir ', { type: 'Watching' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : '*help'}`))
   .catch(console.error);
 
