@@ -30,7 +30,7 @@ function play(connection, message) {
 client.on("ready", () => {
 
   console.log("Je suis prêt !");
-  bot.user.setActivity("Type !help");;
+  bot.user.setActivity("Type !help");
 
 });
 
