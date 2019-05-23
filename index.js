@@ -530,13 +530,6 @@ client.on('message', async message => {
       .setFooter('Face :)')
     message.channel.send(face_embed);a
   }
-  
-  bot.on('guildMemberAdd', member => {
-  console.log('User' + member.user.tag + 'has joined the server!');
-
-  var role = member.guild.roles.find('name', 'user');
-  member.addRole(role);
-    
   });
       
     
